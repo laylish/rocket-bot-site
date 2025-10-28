@@ -5,158 +5,211 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RocketBot Features - Pink Boxes</title>
   <style>
-    body {
-      margin-left: 50px;
-      margin-right: 50px;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #1e1e2f;
-      color: #fff;
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e2f;
+    color: #fff;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .box {
+    background: #2c2c3e;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-height: 200px;
+  }
+
+  .box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(255, 102, 178, 0.5);
+  }
+
+  .box h2 {
+    font-size: 1.5em;
+    margin-bottom: 12px;
+    color: #ff66b3;
+  }
+
+  .box p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #ccc;
+    flex-grow: 1;
+  }
+
+  .command-label,
+  .community-label {
+    margin-top: 15px;
+    font-family: monospace;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+
+  .command-label {
+    font-size: 1.2em;
+  }
+
+  .community-label {
+    font-size: 1em;
+  }
+
+  .command-label span,
+  .community-label span {
+    display: inline-block;
+    background: rgba(255, 102, 179, 0.2);
+    color: #ff66b3;
+    padding: 3px 6px;
+    border-radius: 6px;
+    margin: 2px;
+  }
+
+  /* Community Section */
+  .community-section {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .community-section h2 {
+    color: #ff99cc;
+    margin-bottom: 10px;
+    font-size: 1.6em;
+  }
+
+  .community-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+  }
+
+  .community-box {
+    background: #2c2c3e;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .community-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(255, 102, 178, 0.4);
+  }
+
+  .community-box img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    object-fit: cover;
+  }
+
+  .community-box h3 {
+    margin: 0;
+    color: #ff99cc;
+    font-size: 1.1em;
+  }
+
+  footer {
+    margin-top: 60px;
+    padding: 20px;
+    text-align: center;
+    color: #ccc;
+    font-size: 0.9em;
+  }
+
+  .text-pink {
+    color: #ff66b3;
+  }
+
+  .text-title-pink {
+    color: #ff99cc;
+  }
+
+  /* --- 📱 Mobile Responsive Tweaks --- */
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+      padding: 15px;
     }
 
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 20px;
-      padding: 10px;
+    body {
+      margin: 0 10px;
     }
 
     .box {
-      background: #2c2c3e;
-      border-radius: 15px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between; /* pushes commands to bottom */
-      transition: transform 0.3s, box-shadow 0.3s;
-      min-height: 200px;
-    }
-
-    .box:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 20px rgba(255, 102, 178, 0.5);
+      padding: 15px;
     }
 
     .box h2 {
-      font-size: 1.5em;
-      margin-bottom: 12px;
-      color: #ff66b3;
+      font-size: 1.3em;
     }
 
     .box p {
-      font-size: 1em;
-      line-height: 1.5;
-      color: #ccc;
-      flex-grow: 1;
+      font-size: 0.95em;
     }
 
     .command-label {
-      margin-top: 15px;
-      font-family: monospace;
-      font-weight: bold;
-      font-size: 1.4em;
-      display: inline-block;
-      text-align: center;
-      color: #fff;
-      max-width: 100%;
-      word-wrap: break-word;
-    }
-
-    .community-label {
-      margin-top: 15px;
-      font-family: monospace;
-      font-weight: bold;
       font-size: 1em;
-      display: inline-block;
-      text-align: center;
-      color: #fff;
-      max-width: 100%;
-      word-wrap: break-word;
-    }
-
-     .community-label span {
-      display: inline-block;
-      background: rgba(255, 102, 179, 0.2);
-      color: #ff66b3;
-      padding: 2px;
-      border-radius: 6px;
-      margin: 1px;
-    }
-
-
-    .command-label span {
-      display: inline-block;
-      background: rgba(255, 102, 179, 0.2);
-      color: #ff66b3;
-      padding: 2px;
-      border-radius: 6px;
-      margin: 1px;
-    }
-
-    /* Community section */
-    .community-section {
-      max-width: 1000px;
-      margin-top: 30px;
-      padding: 0 20px;
-      text-align: center;
-    }
-
-    .community-section h2 {
-      color: #ff99cc;
-      margin-bottom: 8px;
-      font-size: 1.5em;
     }
 
     .community-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
-
-    .community-box {
-      background: #2c2c3e;
-      border-radius: 15px;
-      padding: 10px;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .community-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(255, 102, 178, 0.4);
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     }
 
     .community-box img {
       width: 50px;
       height: 50px;
-      border-radius: 50%;
-      margin-bottom: 12px;
-      object-fit: cover;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .box {
+      padding: 12px;
+      border-radius: 10px;
     }
 
-    .community-box h3 {
-      margin: 0;
-      color: #ff99cc;
-      font-size: 1.2em;
+    .box h2 {
+      font-size: 1.1em;
     }
 
-    /* Footer */
-    footer {
-      margin-top: 60px;
-      padding: 20px;
-      text-align: center;
-      color: #ccc;
+    .box p {
       font-size: 0.9em;
     }
-    .text-pink {
-     color: #ff66b3;
+
+    .command-label {
+      font-size: 0.9em;
     }
-    .text-title-pink {
-     color: #ff99cc;
+
+    .community-section h2 {
+      font-size: 1.3em;
     }
-  </style>
+
+    footer {
+      font-size: 0.8em;
+    }
+  }
+</style>
+
 </head>
 <body>
+
    <!-- Intro Section -->
   <div style="max-width: 900px; margin: 10px auto; padding: 0 20px; text-align: center; color: #fff;">
     <h1 class="text-title-pink">RocketBot</h1>
@@ -260,12 +313,6 @@
       </div>
     </div>
   </div>
-  <!-- Why RocketBot Section -->
-<!--  <div style="max-width: 500px; margin: 60px auto; padding: 0 20px; text-align: center; color: #fff;">-->
-<!--    <p><span class="text-title-pink">RocketBot</span> is designed for both casual fun and competitive gameplay, making your server a hub of Team Rocket-style mischief, games, and social interaction.</p>-->
-<!--    <p>It's easy to use, combining prefix commands and slash commands so everyone can join the fun. Some features are premium-only, while others are free for all members.</p>-->
-<!--  </div>-->
-  <!-- Footer -->
   <footer>
     &copy; 2025 RocketBot. All Rights Reserved.
   </footer>
