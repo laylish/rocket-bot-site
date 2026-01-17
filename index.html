@@ -13,7 +13,6 @@
       color: #fff;
     }
 
-    /* Main container */
     .container {
       max-width: 900px;
       margin: 20px auto;
@@ -26,39 +25,45 @@
       border-radius: 15px;
       padding: 30px 25px;
       box-shadow: 0 8px 20px rgba(255, 102, 178, 0.3);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .guide-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(255, 102, 178, 0.5);
     }
 
     .guide-card h2 {
-      color: #ff66b3;
+      font-size: 1.25em;
+      color: #facc15; /* yellow-300 */
       margin-top: 20px;
       margin-bottom: 8px;
-      font-size: 1.4em;
     }
 
-    .guide-card p, .guide-card ol, .guide-card ul {
+    .guide-card p,
+    .guide-card li,
+    .guide-card ol li {
       color: #ccc;
       font-size: 1em;
       line-height: 1.5;
       margin-bottom: 12px;
     }
 
-    .guide-card ol { padding-left: 20px; list-style-type: decimal; }
-    .guide-card ul { padding-left: 20px; list-style-type: disc; }
+    .guide-card ol {
+      padding-left: 20px;
+      list-style-type: decimal;
+    }
+
+    .guide-card ul {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
 
     .text-yellow { color: #facc15; }
     .text-purple { color: #a78bfa; }
+    .text-purple-400 { color: #c084fc; }
     .text-red { color: #f87171; }
     .text-pink { color: #ff66b3; }
     .text-gray { color: #ccc; }
     .italic { font-style: italic; }
+    .font-semibold { font-weight: 600; }
+    .ml-20 { margin-left: 20px; }
 
-    /* Community Section (full-width card) */
+    /* Community Section (full-width) */
     .community-section {
       max-width: 1200px;
       margin: 30px auto;
@@ -86,9 +91,9 @@
       background: #3a3a52;
       border-radius: 12px;
       padding: 15px;
+      text-align: center;
       transition: transform 0.3s, box-shadow 0.3s;
       width: 100%;
-      text-align: center;
     }
 
     .community-box:hover {
@@ -120,7 +125,7 @@
       margin-top: 5px;
     }
 
-    /* Join Us section (original design) */
+    /* Join Section (original simple style) */
     .join-section {
       text-align: center;
       margin: 30px 0;
@@ -154,56 +159,80 @@
 
     @media (max-width: 480px) {
       .guide-card { padding: 15px 12px; border-radius: 10px; }
-      .guide-card h2 { font-size: 1.2em; }
+      .guide-card h2 { font-size: 1.1em; }
       .community-section h2, .join-section h2 { font-size: 1.3em; }
     }
   </style>
 </head>
 <body>
-
   <div class="container">
     <!-- One Big Guide Card -->
     <div class="guide-card">
-      <div style="color:#ffcc66; font-size:1.8em; font-weight:bold; margin-bottom:15px;">🚀 Hi Trainer, welcome to the RocketBot Guide!</div>
-      <p class="text-purple">I made this guide to help you get started smoothly — no confusion, no chaos (well… maybe a little 😄).</p>
+      <!-- Header -->
+      <div style="color:#facc15; font-size:1.8em; font-weight:bold; margin-bottom:15px;">
+        🚀 Hi Trainer, welcome to the RocketBot Guide!
+      </div>
+      <p class="text-purple-400 mb-6">
+        I made this guide to help you get started smoothly — no confusion, no chaos (well… maybe a little 😄).
+      </p>
 
+      <!-- Sections -->
       <!-- Launch -->
-      <h2>🚀 Launch RocketBot</h2>
-      <ol>
-        <li>Open <span class="text-purple">Discord</span> and go to Apps / Commands.</li>
-        <li>Find <span class="text-red">RocketBot</span>.</li>
-        <li>Hit the <span class="text-pink">“Launch”</span> button.</li>
-      </ol>
+      <section>
+        <h2>🚀 Launch RocketBot</h2>
+        <ul>
+          <li>1. Open <span class="text-purple-400">Discord</span> and go to Apps / Commands.</li>
+          <li>2. Find <span class="text-red">RocketBot</span>.</li>
+          <li>3. Hit the <span class="text-pink">“Launch”</span> button.</li>
+        </ul>
+      </section>
 
       <!-- How to Play -->
-      <h2>🎮 How to Play</h2>
-      <p><span class="text-pink">🏠 Home</span> — Overview of RocketBot.</p>
-      <p><span class="text-pink">🎯 Catch Pokémon</span> — Hunt down hidden Pokémon 👀⚡</p>
-      <p><span class="text-pink">🕹 Mini Games</span> — Currently includes:<br>
-        <span class="text-pink" style="margin-left:20px;">🎨 Color Challenge</span> — simple, fast, and surprisingly stressful 😆
-      </p>
-      <p><span class="text-pink">🔥 Campfire Confession</span> — A chill (or chaotic 👀) game where secrets come out.</p>
-      <p><span class="text-pink">🧩 Escape Room</span> — Hosted on another website: puzzles, clues, Pokémon 🧠🔥</p>
-      <p><span class="text-pink">⚡ Lightning Round</span> — <span class="text-purple italic">Under development</span>. Fast-paced chaos coming soon.</p>
+      <section>
+        <h2>🎮 How to Play</h2>
+        <p><span class="font-semibold text-pink">🏠 Home</span> — A quick overview of what RocketBot is all about.</p>
+        <p><span class="font-semibold text-pink">🎯 Catch Pokémon</span> — Hunt down hidden Pokémon and prove your trainer instincts 👀⚡</p>
+        <p><span class="font-semibold text-pink">🕹 Mini Games</span> — Currently includes:<br>
+          <span class="ml-20 text-pink">🎨 Color Challenge</span> — simple, fast, and surprisingly stressful 😆
+        </p>
+        <p><span class="font-semibold text-pink">🔥 Campfire Confession</span> — A chill (or chaotic 👀) game where secrets come out.</p>
+        <p><span class="font-semibold text-pink">🧩 Escape Room</span> — Hosted on another website because it’s a full experience. Expect puzzles, clues, Pokémon, and brain pain 🧠🔥</p>
+        <p><span class="font-semibold text-pink">⚡ Lightning Round</span> — <span class="italic text-purple-400">Under development</span>. Fast-paced, instinct-based chaos coming soon.</p>
+      </section>
 
       <!-- Others -->
-      <h2>🧩 Others</h2>
-      <ul>
-        <li><span class="text-pink">Shop</span> — Because rewards matter.</li>
-        <li><span class="text-pink">Leaderboard</span> — Flex your skills 👑</li>
-      </ul>
+      <section>
+        <h2>🧩 Others</h2>
+        <ul>
+          <li><span class="font-semibold text-pink">Shop</span> — Because rewards matter.</li>
+          <li><span class="font-semibold text-pink">Leaderboard</span> — Flex your skills and claim your spot 👑</li>
+        </ul>
+      </section>
 
       <!-- History -->
-      <h2>📜 History</h2>
-      <p>Most of RocketBot’s core games started as Discord commands and were later rebuilt into 2D interactive experiences.</p>
-      <p>Some brilliant ideas came from <span class="text-red">Team Rocket</span>: <span class="text-pink">Jessie</span>, <span class="text-yellow">Meowth</span>, and the developer.</p>
-      <p>This project turns boring commands into chaotic, fun experiences ⚡💥</p>
+      <section>
+        <h2>📜 History</h2>
+        <p class="text-gray">
+          Most of RocketBot’s core games started as Discord commands and were later rebuilt into a 2D interactive experience. Some commands still exist, but they’ll eventually disappear — especially core games like Escape Room and Campfire Confession.
+        </p>
+        <p>Some of these brilliant (or insane) ideas came from <span class="text-red">Team Rocket</span> brainstorming sessions—mostly <span class="text-pink">Jessie</span> and <span class="text-yellow">Meowth</span>, and me just trying to keep up. The Shop, in particular, is pure chaos: a collaboration of Jessie’s wild ideas, Meowth’s cunning schemes, and a little bit of sanity sprinkled in (okay, almost none).</p>
+        <p>Basically, this whole project exists to take boring commands and turn them into a fully chaotic, slightly terrifying, 100% fun experience. Escape rooms, mini games, campfires… it’s all part of the Rocket madness. Buckle up! ⚡💥</p>
+        <p class="text-purple-400 mt-2">
+          This upgrade was made to create a more immersive and interactive gameplay experience.
+        </p>
+      </section>
 
       <!-- About -->
-      <h2>👨‍🚀 About the Author</h2>
-      <p>Hi! I’m <span class="text-pink">James from Team Rocket (PFL)</span> 🚀 RocketBot is made purely for fun as a hobby.</p>
-      <p class="text-purple">Main games are visible; more can be added if ideas arise 😅</p>
-      <p class="text-gray">Feedback or suggestions? Feel free to reach out 😌</p>
+      <section>
+        <h2>👨‍🚀 About the Author</h2>
+        <p class="text-gray">
+          Hi! I’m <span class="font-semibold">James from Team Rocket (PFL)</span> 🚀 RocketBot was made purely for fun and as a hobby whenever I’m not busy IRL.
+        </p>
+        <p class="text-purple-400 mt-2">
+          Everything you see in the menu are the main games currently available — nothing hidden. More can be added as long as I’m not busy 😅 or if you’ve got a solid idea.
+        </p>
+        <p class="text-gray mt-2">Got suggestions, feedback, or violent reactions? Feel free to reach out 😌</p>
+      </section>
     </div>
 
     <!-- Community Section (full-width card) -->
@@ -228,7 +257,7 @@
       </div>
     </div>
 
-    <!-- Join Section (simple) -->
+    <!-- Join Section -->
     <div class="join-section">
       <h2>Join Us</h2>
       <div style="display:flex; justify-content:center; align-items:center; gap:8px;">
@@ -239,6 +268,5 @@
   </div>
 
   <footer>&copy; 2025 RocketBot. All Rights Reserved.</footer>
-
 </body>
 </html>
