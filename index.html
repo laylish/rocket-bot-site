@@ -1,1 +1,243 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RocketBot Guide</title><style>body{margin:0;padding:0;font-family:Arial,sans-serif;background-color:#1e1e2f;color:#fff}.container{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;padding:20px;max-width:1200px;margin:0 auto}.box{background-color:#2c2c3e;border-radius:15px;padding:20px;display:flex;flex-direction:column;gap:12px;transition:transform .3s,box-shadow .3s}.box:hover{transform:translateY(-8px);box-shadow:0 10px 20px rgba(255,102,178,.5)}.box h2{color:#ff66b3;font-size:1.4em;margin-bottom:8px}.box ol,.box p,.box ul{color:#ccc;font-size:1em;line-height:1.5}.box ol{padding-left:20px;list-style-type:decimal}.box ul{padding-left:20px;list-style-type:disc}.text-yellow{color:#facc15}.text-purple{color:#a78bfa}.text-red{color:#f87171}.text-pink{color:#ff66b3}.text-gray{color:#ccc}.section-title{font-weight:700;margin-bottom:6px}.space-y-3>*+*{margin-top:12px}.community-section{grid-column:1/-1;background:#2c2c3e;border-radius:15px;padding:20px;text-align:center}.community-section h2{color:#f9c;margin-bottom:15px;font-size:1.6em}.community-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;justify-items:center}.community-box{background:#3a3a52;border-radius:12px;padding:15px;transition:transform .3s,box-shadow .3s;width:100%;text-align:center}.community-box:hover{transform:translateY(-5px);box-shadow:0 8px 15px rgba(255,102,178,.4)}.community-box img{width:60px;height:60px;border-radius:50%;margin-bottom:10px;object-fit:cover}.community-box h3{color:#f9c;font-size:1.1em;margin-bottom:5px}.community-label span{display:inline-block;background:rgba(255,102,179,.2);color:#ff66b3;padding:2px 6px;border-radius:6px;font-size:.9em;margin-top:5px}footer{margin-top:40px;padding:20px;text-align:center;color:#ccc;font-size:.9em}@media (max-width:768px){.container{grid-template-columns:1fr}.community-container{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}.community-box img{width:50px;height:50px}}</style></head><body><div class="container"><div class="box"><h2>🚀 Launch RocketBot</h2><ol><li>Open<span class="text-purple">Discord</span>and go to Apps / Commands.</li><li>Find<span class="text-red">RocketBot</span>.</li><li>Hit the<span class="text-pink">“Launch”</span>button.</li></ol></div><div class="box"><h2>🎮 How to Play</h2><div class="space-y-3"><p><span class="text-pink">🏠 Home</span>— Overview of RocketBot.</p><p><span class="text-pink">🎯 Catch Pokémon</span>— Hunt down hidden Pokémon 👀⚡</p><p><span class="text-pink">🕹 Mini Games</span>— Currently includes:<br><span class="text-pink" style="margin-left:20px">🎨 Color Challenge</span>— fast & stressful 😆</p><p><span class="text-pink">🔥 Campfire Confession</span>— Secrets come out 👀</p><p><span class="text-pink">🧩 Escape Room</span>— Full experience: puzzles, clues, Pokémon 🧠🔥</p><p><span class="text-pink">⚡ Lightning Round</span>—<span class="text-purple italic">Under development</span></p></div></div><div class="box"><h2>🧩 Others</h2><ul><li><span class="text-pink">Shop</span>— Because rewards matter.</li><li><span class="text-pink">Leaderboard</span>— Flex your skills 👑</li></ul></div><div class="box"><h2>📜 History</h2><p>Most of RocketBot’s core games started as Discord commands and were later rebuilt into 2D interactive experiences.</p><p>Some brilliant ideas came from<span class="text-red">Team Rocket</span>:<span class="text-pink">Jessie</span>,<span class="text-yellow">Meowth</span>, and the developer.</p><p>This project turns boring commands into chaotic, fun experiences ⚡💥</p></div><div class="box"><h2>👨‍🚀 About the Author</h2><p>Hi! I’m<span class="text-pink">James from Team Rocket (PFL)</span>🚀 RocketBot is made for fun as a hobby.</p><p class="text-purple">Main games are visible; more can be added if ideas arise 😅</p><p class="text-gray">Feedback or suggestions? Feel free to reach out 😌</p></div><div class="community-section"><h2>PFL Community</h2><div class="community-container"><div class="community-box"><img src="1.png" alt="Member 1"><h3>Cin (Jessie)</h3><div class="community-label"><span>server owner</span></div></div><div class="community-box"><img src="2.png" alt="Member 2"><h3>Joa (Meowth)</h3><div class="community-label"><span>co-admin / moderator</span></div></div><div class="community-box"><img src="3.jpg" alt="Member 3"><h3>Lilay (James)</h3><div class="community-label"><span>co-admin / bot developer</span></div></div></div></div><div class="community-section"><h2>Join Us</h2><div class="community-container"><div style="display:flex;gap:4px;align-items:center;justify-content:center"><img src="discord_icon.jpg" width="30" height="30"><a href="https://discord.gg/7EUvnCYKku" class="text-pink" style="text-decoration:none" target="_blank">PFL Community</a></div></div></div></div><footer>&copy; 2025 RocketBot. All Rights Reserved.</footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RocketBot Guide</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #1e1e2f;
+      color: #fff;
+    }
+
+    /* Main container */
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    /* Big Guide Card */
+    .guide-card {
+      background-color: #2c2c3e;
+      border-radius: 15px;
+      padding: 30px 25px;
+      box-shadow: 0 8px 20px rgba(255, 102, 178, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .guide-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(255, 102, 178, 0.5);
+    }
+
+    .guide-card h2 {
+      color: #ff66b3;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      font-size: 1.4em;
+    }
+
+    .guide-card p, .guide-card ol, .guide-card ul {
+      color: #ccc;
+      font-size: 1em;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .guide-card ol { padding-left: 20px; list-style-type: decimal; }
+    .guide-card ul { padding-left: 20px; list-style-type: disc; }
+
+    .text-yellow { color: #facc15; }
+    .text-purple { color: #a78bfa; }
+    .text-red { color: #f87171; }
+    .text-pink { color: #ff66b3; }
+    .text-gray { color: #ccc; }
+    .italic { font-style: italic; }
+
+    /* Community Section (full-width card) */
+    .community-section {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #2c2c3e;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .community-section h2 {
+      color: #ff99cc;
+      margin-bottom: 15px;
+      font-size: 1.6em;
+    }
+
+    .community-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .community-box {
+      background: #3a3a52;
+      border-radius: 12px;
+      padding: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 100%;
+      text-align: center;
+    }
+
+    .community-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(255, 102, 178, 0.4);
+    }
+
+    .community-box img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      object-fit: cover;
+    }
+
+    .community-box h3 {
+      color: #ff99cc;
+      font-size: 1.1em;
+      margin-bottom: 5px;
+    }
+
+    .community-label span {
+      display: inline-block;
+      background: rgba(255, 102, 179, 0.2);
+      color: #ff66b3;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+
+    /* Join Us section (original design) */
+    .join-section {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .join-section h2 {
+      color: #ff99cc;
+      font-size: 1.6em;
+      margin-bottom: 10px;
+    }
+
+    .join-section a {
+      color: #ff66b3;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      text-align: center;
+      color: #ccc;
+      font-size: 0.9em;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .guide-card { padding: 20px 15px; }
+      .community-box img { width: 50px; height: 50px; }
+    }
+
+    @media (max-width: 480px) {
+      .guide-card { padding: 15px 12px; border-radius: 10px; }
+      .guide-card h2 { font-size: 1.2em; }
+      .community-section h2, .join-section h2 { font-size: 1.3em; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- One Big Guide Card -->
+    <div class="guide-card">
+      <div style="color:#ffcc66; font-size:1.8em; font-weight:bold; margin-bottom:15px;">🚀 Hi Trainer, welcome to the RocketBot Guide!</div>
+      <p class="text-purple">I made this guide to help you get started smoothly — no confusion, no chaos (well… maybe a little 😄).</p>
+
+      <!-- Launch -->
+      <h2>🚀 Launch RocketBot</h2>
+      <ol>
+        <li>Open <span class="text-purple">Discord</span> and go to Apps / Commands.</li>
+        <li>Find <span class="text-red">RocketBot</span>.</li>
+        <li>Hit the <span class="text-pink">“Launch”</span> button.</li>
+      </ol>
+
+      <!-- How to Play -->
+      <h2>🎮 How to Play</h2>
+      <p><span class="text-pink">🏠 Home</span> — Overview of RocketBot.</p>
+      <p><span class="text-pink">🎯 Catch Pokémon</span> — Hunt down hidden Pokémon 👀⚡</p>
+      <p><span class="text-pink">🕹 Mini Games</span> — Currently includes:<br>
+        <span class="text-pink" style="margin-left:20px;">🎨 Color Challenge</span> — simple, fast, and surprisingly stressful 😆
+      </p>
+      <p><span class="text-pink">🔥 Campfire Confession</span> — A chill (or chaotic 👀) game where secrets come out.</p>
+      <p><span class="text-pink">🧩 Escape Room</span> — Hosted on another website: puzzles, clues, Pokémon 🧠🔥</p>
+      <p><span class="text-pink">⚡ Lightning Round</span> — <span class="text-purple italic">Under development</span>. Fast-paced chaos coming soon.</p>
+
+      <!-- Others -->
+      <h2>🧩 Others</h2>
+      <ul>
+        <li><span class="text-pink">Shop</span> — Because rewards matter.</li>
+        <li><span class="text-pink">Leaderboard</span> — Flex your skills 👑</li>
+      </ul>
+
+      <!-- History -->
+      <h2>📜 History</h2>
+      <p>Most of RocketBot’s core games started as Discord commands and were later rebuilt into 2D interactive experiences.</p>
+      <p>Some brilliant ideas came from <span class="text-red">Team Rocket</span>: <span class="text-pink">Jessie</span>, <span class="text-yellow">Meowth</span>, and the developer.</p>
+      <p>This project turns boring commands into chaotic, fun experiences ⚡💥</p>
+
+      <!-- About -->
+      <h2>👨‍🚀 About the Author</h2>
+      <p>Hi! I’m <span class="text-pink">James from Team Rocket (PFL)</span> 🚀 RocketBot is made purely for fun as a hobby.</p>
+      <p class="text-purple">Main games are visible; more can be added if ideas arise 😅</p>
+      <p class="text-gray">Feedback or suggestions? Feel free to reach out 😌</p>
+    </div>
+
+    <!-- Community Section (full-width card) -->
+    <div class="community-section">
+      <h2>PFL Community</h2>
+      <div class="community-container">
+        <div class="community-box">
+          <img src="1.png" alt="Member 1">
+          <h3>Cin (Jessie)</h3>
+          <div class="community-label"><span>server owner</span></div>
+        </div>
+        <div class="community-box">
+          <img src="2.png" alt="Member 2">
+          <h3>Joa (Meowth)</h3>
+          <div class="community-label"><span>co-admin / moderator</span></div>
+        </div>
+        <div class="community-box">
+          <img src="3.jpg" alt="Member 3">
+          <h3>Lilay (James)</h3>
+          <div class="community-label"><span>co-admin / bot developer</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Join Section (simple) -->
+    <div class="join-section">
+      <h2>Join Us</h2>
+      <div style="display:flex; justify-content:center; align-items:center; gap:8px;">
+        <img src="discord_icon.jpg" width="30" height="30" style="border-radius:4px;">
+        <a href="https://discord.gg/7EUvnCYKku" target="_blank">PFL Community</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>&copy; 2025 RocketBot. All Rights Reserved.</footer>
+
+</body>
+</html>
